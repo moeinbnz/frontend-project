@@ -1,0 +1,227 @@
+{
+	"info": {
+		"_postman_id": "3f26cf23-32dd-4b4e-806d-3277d3ea5ccc",
+		"name": "data",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "18924733"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"mahshid\",\n    \"password\":\"12345678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8080/authentication/login/"
+			},
+			"response": []
+		},
+		{
+			"name": "profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE0OTQ3MDYyLCJpYXQiOjE3MDcxNzEwNjIsImp0aSI6ImY3YjAxNzZmYjA5YTQ1ODJiZjI1ZGEyNGQ2ZTc4YWRjIiwidXNlcl9pZCI6Mn0._PfaRPI8IdnUou3RM4HvRlBHtEhLJPMum2i10RyOX0Q"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8080/account/detail"
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"mahshid2\",\n    \"password\":\"12345678\",\n    \"email\":\"mahshid@mail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8080/authentication/register/"
+			},
+			"response": []
+		},
+		{
+			"name": "product_list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE0OTQ3MDYyLCJpYXQiOjE3MDcxNzEwNjIsImp0aSI6ImY3YjAxNzZmYjA5YTQ1ODJiZjI1ZGEyNGQ2ZTc4YWRjIiwidXNlcl9pZCI6Mn0._PfaRPI8IdnUou3RM4HvRlBHtEhLJPMum2i10RyOX0Q"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"milk\",\n    \"price\":10000,\n    \"buy_price\":5000,\n    \"count\":10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/management/product/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"management",
+						"product",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "m",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "product detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE0OTQ3MDYyLCJpYXQiOjE3MDcxNzEwNjIsImp0aSI6ImY3YjAxNzZmYjA5YTQ1ODJiZjI1ZGEyNGQ2ZTc4YWRjIiwidXNlcl9pZCI6Mn0._PfaRPI8IdnUou3RM4HvRlBHtEhLJPMum2i10RyOX0Q"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"bread\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8080/management/product/3/"
+			},
+			"response": []
+		},
+		{
+			"name": "basket list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE0OTQ3MzQzLCJpYXQiOjE3MDcxNzEzNDMsImp0aSI6IjA4OWRiMmJjNjhhZjQ5ZTRiMDBlZDgwZGM5MzJlMDE0IiwidXNlcl9pZCI6Mn0.L4kcy_hQoy3Jr29i8y6MChwdyM2ZpmPTGdpbvFPwGuk"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"basket_products\":[\n        {\n            \"product\":5,\n            \"count\":5\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8080/management/basket/"
+			},
+			"response": []
+		},
+		{
+			"name": "basket product add",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE0OTQyOTk3LCJpYXQiOjE3MDcxNjY5OTcsImp0aSI6IjI4MjRjN2MzZWUwMDRiOTc4YzFiNTBlYjgyYWNhYTI3IiwidXNlcl9pZCI6MX0.nzED-G6JcrI4efZ5LYmqlSG9nXq4V6gkXOlTukHa4kE"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"product\":4,\n    \"count\":2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8080/management/basket/basket-product/add/1/"
+			},
+			"response": []
+		},
+		{
+			"name": "basket product detail",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE0OTQyOTk3LCJpYXQiOjE3MDcxNjY5OTcsImp0aSI6IjI4MjRjN2MzZWUwMDRiOTc4YzFiNTBlYjgyYWNhYTI3IiwidXNlcl9pZCI6MX0.nzED-G6JcrI4efZ5LYmqlSG9nXq4V6gkXOlTukHa4kE"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "http://127.0.0.1:8080/management/basket/basket-product/5/"
+			},
+			"response": []
+		},
+		{
+			"name": "basket_detail",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE0OTQyOTk3LCJpYXQiOjE3MDcxNjY5OTcsImp0aSI6IjI4MjRjN2MzZWUwMDRiOTc4YzFiNTBlYjgyYWNhYTI3IiwidXNlcl9pZCI6MX0.nzED-G6JcrI4efZ5LYmqlSG9nXq4V6gkXOlTukHa4kE"
+					}
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"status\":2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8080/management/basket/1/"
+			},
+			"response": []
+		}
+	]
+}
